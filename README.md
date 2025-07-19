@@ -35,13 +35,6 @@ ResumeBhai/
 
 ---
 
-## 🚀 Live Demo
-
-- **Frontend**: [https://resume-xpertfrontend.vercel.app]((https://resumebhai-ashdev.vercel.app/))  
-- **Backend API**: [https://resume-xpert-api.onrender.com](https://resume-bhai-backend.vercel.app/))
-
-
-
 ---
 
 ## 🛠️ Tech Stack
