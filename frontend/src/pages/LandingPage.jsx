@@ -459,7 +459,7 @@ const LandingPage = () => {
             <img
               src="/logo.svg"
               alt="Resume wallah"
-              className="h-12 sm:h-14"
+              className="h-10 sm:h-14"
             />
 
           </div>
