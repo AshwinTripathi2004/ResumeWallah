@@ -1,75 +1,74 @@
-# 🚀 ResumeBhai
+```
+# 🌟 ResumeWallah – AI-Powered Smart Resume Builder Built on MERN Stack
 
-**ResumeBhai** is a modern, full-stack resume builder web application that allows users to register, create, and download personalized resumes online. The app is split into two parts:
-
-- 🌐 Frontend (React/Vite)  
-- 🔧 Backend (Node.js + Express + MongoDB)
+**ResumeWallah** is a next-gen, full-stack resume builder web application that uses the power of **Artificial Intelligence** and the popular **MERN Stack** (MongoDB, Express, React, Node.js) to help users build sleek, professional, and personalized resumes in minutes. Whether you're a student, fresher, or working professional — ResumeWallah makes resume creation fast, smart, and effortless with intelligent suggestions and a beautiful design.
 
 ---
 
-## 🧱 Project Structure
+## 📁 Project Structure
 
 ```
-ResumeBhai/
+
+ResumeWallah/
 ├── frontend/   # React frontend (Vite)
 ├── backend/    # Node.js/Express API
 └── README.md
-```
+
+````
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-### 👨‍💻 Frontend
-- Responsive resume builder UI  
-- Custom resume sections: Education, Experience, Projects, etc.  
-
+### 🌐 Frontend
+- Beautiful, fully responsive user interface  
+- Dynamic resume sections: Education, Experience, Skills, Projects, etc.  
+- Real-time preview and downloadable PDF resumes  
+- AI-powered smart content suggestions  
 - Deployed on **Vercel**
 
 ### 🔐 Backend
-- JWT-based Authentication (Register/Login)  
-- Resume management APIs (CRUD)  
-- File upload support  
-- MongoDB database connection  
-- Deployed on **vercel**
+- Secure user authentication with JWT  
+- Full CRUD API for managing resumes  
+- File export functionality (PDF generation)  
+- MongoDB database integration  
+- Environment variable support for clean configuration  
+- Deployed on **Render**
 
 ---
 
+## 🧰 Tech Stack
+
+| Layer    | Technology                                |
+|----------|--------------------------------------------|
+| Stack    | **MERN Stack** (MongoDB, Express, React, Node.js) |
+| Frontend | React (Vite), Tailwind CSS                 |
+| Backend  | Node.js, Express.js, MongoDB               |
+| Auth     | JWT (JSON Web Tokens)                      |
+| Tools    | Axios, html2pdf.js, dotenv, CORS           |
+| Hosting  | Vercel (frontend), Render (backend)        |
+| AI       | Gemini API (for AI-powered suggestions)    |
+
 ---
 
-## 🛠️ Tech Stack
+## ⚙️ Local Setup Instructions
 
-| Layer    | Technology                          |
-|----------|--------------------------------------|
-| Frontend | React (Vite), Tailwind CSS           |
-| Backend  | Node.js, Express.js, MongoDB         |
-| Auth     | JWT (JSON Web Tokens)                |
-| Tools    | Axios, html2pdf.js, dotenv, CORS     |
-| Hosting  | Vercel (frontend), Render (backend)  |
-
----
-
-## 📦 Installation (Local Setup)
-
-### 🧩 Prerequisites
+### 🔹 Prerequisites
 
 - Node.js & npm  
-- MongoDB
+- MongoDB installed (or use MongoDB Atlas URI)
 
-### 🔹 Clone the Repository
+### 🔸 Clone the Repository
 
 ```bash
-git clone https://github.com/YourUsername/ResumeBhai.git
-cd ResumeBhai
-```
+git clone https://github.com/ashwintripathi2004/ResumeWallah.git
+cd ResumeWallah
+````
 
-> Replace `YourUsername` with your actual GitHub username.
 
 ---
 
-## 📂 Folder Setup
-
-### Frontend Setup
+### 💻 Frontend Setup
 
 ```bash
 cd frontend
@@ -77,7 +76,7 @@ npm install
 npm run dev
 ```
 
-### Backend Setup
+### 🖥️ Backend Setup
 
 ```bash
 cd backend
@@ -85,19 +84,22 @@ npm install
 npm run dev
 ```
 
-> Ensure MongoDB is running and update `.env` variables as needed.
+> Make sure MongoDB is running and `.env` variables like `MONGO_URI`, `JWT_SECRET`, etc., are configured properly.
 
 ---
 
-## 📝 License
+## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-## 🙌 Acknowledgements
+## 🙏 Acknowledgements
 
-Inspired by modern resume builders and made with ❤️ by the open-source community.
+Crafted with ❤️ to empower everyone with intelligent and beautiful resumes using the power of AI and the MERN Stack.
+
+```
 
 ---
+
 
