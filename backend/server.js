@@ -15,10 +15,7 @@ const app = express();
 const PORT = 4000;
 
 // Middleware to handle CORS
-app.use(cors({
-  origin: '*',
-  credentials: true,
-}));
+app.use(cors());
 
 // Connect Database
 connectDB();
