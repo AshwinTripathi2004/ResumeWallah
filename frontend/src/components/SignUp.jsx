@@ -59,21 +59,21 @@ const SignUp = ({ setCurrentPage }) => {
           value={fullName}
           onChange={({ target }) => setFullName(target.value)}
           label="Full Name"
-          placeholder="John Doe"
+          placeholder="Ashwini Tripathi"
           type="text"
         />
         <Input
           value={email}
           onChange={({ target }) => setEmail(target.value)}
           label="Email"
-          placeholder="email@example.com"
+          placeholder="ashdev@example.com"
           type="email"
         />
         <Input
           value={password}
           onChange={({ target }) => setPassword(target.value)}
           label="Password"
-          placeholder="Min 8 characters"
+          placeholder="Min 9 characters"
           type="password"
         />
         {error && <div className={styles.errorMessage}>{error}</div>}

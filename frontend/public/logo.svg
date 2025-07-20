@@ -1,0 +1,58 @@
+<svg width="550" height="120" viewBox="0 0 550 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Animated Blue-Black Gradient -->
+    <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f0c29">
+        <animate attributeName="stop-color" values="#0f0c29;#302b63;#0f0c29" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#24243e">
+        <animate attributeName="stop-color" values="#24243e;#0f0c29;#24243e" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- Text Animation Styling -->
+    <style>
+      .logo-text {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        fill: url(#animatedGradient);
+        letter-spacing: 2px;
+        animation: flicker 3s infinite;
+      }
+
+      .icon-text {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        fill: url(#animatedGradient);
+      }
+
+      @keyframes flicker {
+        0%, 100% {
+          opacity: 1;
+          filter: drop-shadow(0 0 3px #00f);
+        }
+        25% {
+          opacity: 0.9;
+          filter: drop-shadow(0 0 6px #0ff);
+        }
+        50% {
+          opacity: 1;
+          filter: drop-shadow(0 0 10px #00f);
+        }
+        75% {
+          opacity: 0.95;
+          filter: drop-shadow(0 0 6px #0ff);
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Round Icon with RW -->
+  <circle cx="50" cy="60" r="30" stroke="url(#animatedGradient)" stroke-width="4" fill="none"/>
+  <text x="33" y="67" class="icon-text">RW</text>
+
+  <!-- Fully Visible and Animated Text -->
+  <text x="100" y="75" class="logo-text">ResumeWallah</text>
+</svg>

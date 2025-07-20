@@ -49,14 +49,14 @@ const Login = ({ setCurrentPage }) => {
           value={email}
           onChange={({ target }) => setEmail(target.value)}
           label="Email Address"
-          placeholder="demo@gmail.com"
+          placeholder="ashdev@gmail.com"
           type="email"
         />
         <Input
           value={password}
           onChange={({ target }) => setPassword(target.value)}
           label="Password"
-          placeholder="Min 8 characters"
+          placeholder="Min 9 characters"
           type="password"
         />
         {error && <div className={styles.errorMessage}>{error}</div>}

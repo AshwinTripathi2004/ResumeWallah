@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { Input } from "./Inputs";
 import { RatingInput } from "./ResumeSection";
-import { Plus, Trash2 } from "lucide-react";
+import { Plus, Trash2, Brain } from "lucide-react";
+
 import {
   commonStyles,
   additionalInfoStyles,
@@ -12,8 +14,26 @@ import {
   profileInfoStyles,
   projectDetailStyles,
   skillsInfoStyles,
-  workExperienceStyles
+  workExperienceStyles,
 } from "../assets/dummystyle";
+import { AIChatSession } from "./AIModel";
+
+// **Generate Summary Function**
+const GenerateSummaryFromAI = async (designation, setSummaries) => {
+  const promptTemplate = `Destination {designation}, depends on job title give me a list of summaries for 3 experience levels (Entry, Mid, and Senior) in 3-4 lines. Format as JSON with 'summary' and 'experience_level' fields.`;
+  const prompt = promptTemplate.replace("{designation}", designation);
+
+  try {
+    const result = await AIChatSession.sendMessage(prompt);
+    const responseText = await result.response.text();
+    const summaries = JSON.parse(responseText);
+
+    setSummaries(summaries);
+  } catch (error) {
+    console.error("Error generating AI summaries:", error);
+  }
+};
+
 
 // AdditionalInfoForm Component
 export const AdditionalInfoForm = ({ languages, interests, updateArrayItem, addArrayItem, removeArrayItem }) => {
@@ -189,7 +209,7 @@ export const ContactInfoForm = ({ contactInfo, updateSection }) => {
 
         <Input
           label="Email"
-          placeholder="john@example.com"
+          placeholder="ashdev@example.com"
           type="email"
           value={contactInfo.email || ""}
           onChange={({ target }) => updateSection("email", target.value)}
@@ -297,8 +317,17 @@ export const EducationDetailsForm = ({ educationInfo, updateArrayItem, addArrayI
   );
 };
 
-// ProfileInfoForm Component
+// **ProfileInfoForm Component**
 export const ProfileInfoForm = ({ profileData, updateSection }) => {
+  const [summaries, setSummaries] = useState([]);
+  const [selectedSummary, setSelectedSummary] = useState(null);
+
+  const handleSummarySelection = (summary) => {
+    updateSection("summary", summary);
+    setSelectedSummary(summary);
+    setSummaries([]);
+  };
+
   return (
     <div className={profileInfoStyles.container}>
       <h2 className={profileInfoStyles.heading}>Personal Information</h2>
@@ -307,7 +336,7 @@ export const ProfileInfoForm = ({ profileData, updateSection }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Input
             label="Full Name"
-            placeholder="John Doe"
+            placeholder="Ashwini Tripathi"
             value={profileData.fullName || ""}
             onChange={({ target }) => updateSection("fullName", target.value)}
           />
@@ -320,7 +349,20 @@ export const ProfileInfoForm = ({ profileData, updateSection }) => {
           />
 
           <div className="md:col-span-2">
-            <label className="block text-sm font-bold text-slate-700 mb-3">Summary</label>
+            <div className="flex justify-between items-end pb-2">
+              <label>Add Summary</label>
+              <button
+                variant="outline"
+                onClick={() =>
+                  GenerateSummaryFromAI(profileData.designation || "Developer", setSummaries)
+                }
+                type="button"
+                size="sm"
+                className="border-primary text-primary flex gap-2 items-center font-extrabold cursor-pointer gradient-background"
+              >
+                <Brain className="h-5 w-5" /> Generate from AI
+              </button>
+            </div>
             <textarea
               className={profileInfoStyles.textarea}
               rows={4}
@@ -330,10 +372,31 @@ export const ProfileInfoForm = ({ profileData, updateSection }) => {
             />
           </div>
         </div>
+
+        {summaries.length > 0 && (
+          <div className="mt-6">
+            <h3 className="font-bold text-lg">AI-Generated Summaries</h3>
+            <ul className="list-disc pl-6 space-y-2">
+              {summaries.map((item, index) => (
+                <li
+                  key={index}
+                  className={`cursor-pointer hover:underline ${
+                    selectedSummary === item.summary ? "text-primary" : ""
+                  }`}
+                  onClick={() => handleSummarySelection(item.summary)}
+                >
+                  <strong>{item.experience_level}:</strong> {item.summary}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
 };
+
+
 
 // ProjectDetailForm Component
 export const ProjectDetailForm = ({ projectInfo, updateArrayItem, addArrayItem, removeArrayItem }) => {

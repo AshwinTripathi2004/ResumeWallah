@@ -5,15 +5,10 @@ export const landingPageStyles = {
   // Header styles
   header: "fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-violet-100/50",
   headerContainer: "max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center",
-  logoContainer: "flex items-center gap-4 group transition-all duration-300 ease-in-out",
-
-logoIcon: "w-12 h-12 bg-gradient-to-br from-sky-400 via-blue-300 to-cyan-400 rounded-2xl flex items-center justify-center shadow-xl shadow-sky-200 animate-pulse group-hover:scale-110 transform transition-transform duration-500",
-
-logoIconInner: "w-6 h-6 text-white drop-shadow-md",
-
-logoText: "text-2xl sm:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-sky-500 via-blue-400 to-cyan-400 bg-clip-text text-transparent group-hover:opacity-90 animate-gradient-x bg-[length:200%_200%] transition-all duration-700",
-
-
+  logoContainer: "flex items-center gap-3",
+  logoIcon: "w-10 h-10 bg-gradient-to-br from-violet-600 to-fuchsia-600 rounded-2xl flex items-center justify-center shadow-lg shadow-violet-200",
+  logoIconInner: "w-5 h-5 text-white",
+  logoText: "text-xl sm:text-2xl font-black bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent",
   mobileMenuButton: "md:hidden p-2 rounded-xl hover:bg-violet-50 transition-colors",
   mobileMenuIcon: "text-violet-600",
 
@@ -36,20 +31,20 @@ logoText: "text-2xl sm:text-3xl font-extrabold tracking-tight bg-gradient-to-r f
   main: "pt-24",
 
   // Hero section
-  heroSection: "max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20",
-  heroGrid: "flex flex-wrap justify-between gap-10 lg:gap-12 items-center",
+  heroSection: "max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-10",
+  heroGrid: "flex flex-wrap justify-between gap-10 lg:gap-12",
   heroLeft: "space-y-8",
   tagline: "inline-flex items-center gap-2 sm:gap-3 px-4 py-2 bg-gradient-to-r from-violet-100 to-fuchsia-100 border border-violet-200 text-violet-700 rounded-full font-bold text-xs sm:text-sm",
-  heading: "text-4xl sm:text-6xl lg:text-8xl font-black leading-tight",
-  headingText: "block text-slate-900",
-  headingGradient: "block bg-gradient-to-r from-violet-600 via-fuchsia-600 to-orange-500 bg-clip-text text-transparent",
+  heading: "text-4xl sm:text-6xl lg:text-6xl font-black leading-tight",
+  headingText: " text-slate-900",
+  headingGradient: " bg-gradient-to-r from-violet-600 via-fuchsia-600 to-orange-500 bg-clip-text text-transparent",
   description: "text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed max-w-lg font-medium",
   ctaButtons: "flex flex-col sm:flex-row gap-4",
 
   // Buttons
   primaryButton: "group relative px-10 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold rounded-2xl overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-violet-200",
   primaryButtonOverlay: "absolute inset-0 bg-gradient-to-r from-fuchsia-600 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity",
-  primaryButtonContent: "relative flex items-center gap-2 sm:gap-3",
+  primaryButtonContent: "relative flex items-center justify-center gap-2 sm:gap-3",
   primaryButtonIcon: "group-hover:translate-x-1 transition-transform",
   secondaryButton: "px-8 sm:px-10 py-3 sm:py-4 border-2 border-violet-200 text-violet-700 font-bold rounded-2xl hover:border-violet-300 hover:bg-violet-50 transition-all",
 
@@ -64,6 +59,11 @@ logoText: "text-2xl sm:text-3xl font-extrabold tracking-tight bg-gradient-to-r f
   heroIllustrationBg: "absolute -inset-8 bg-gradient-to-r from-violet-200/50 to-fuchsia-200/50 rounded-3xl blur-3xl",
   heroIllustrationContainer: "relative",
 
+   // Hero head
+  herohead: "relative w-full max-w-sm sm:max-w-md lg:max-w-lg mx-auto",
+  heroheadBg: "absolute -inset-8 -to-r from-violet-200/50 to-fuchsia-200/50 rounded-3xl blur-3xl",
+  heroheadContainer: "relative",
+
   // SVG styles
   svgContainer: "w-full h-auto max-w-md mx-auto",
   svgRect: "fill-[url(#cardGradient)] stroke-[#e2e8f0] stroke-[2]",
@@ -77,7 +77,7 @@ logoText: "text-2xl sm:text-3xl font-extrabold tracking-tight bg-gradient-to-r f
   svgAnimatedPolygon: "fill-[#ef4444] opacity-80",
 
   // Features section
-  featuresSection: "bg-gradient-to-br from-violet-50 to-fuchsia-50 py-16 sm:py-24",
+  featuresSection: " ",
   featuresContainer: "max-w-6xl mx-auto px-4 sm:px-6 lg:px-8",
   featuresHeader: "text-center mb-12 sm:mb-20",
   featuresTitle: "text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 mb-4 sm:mb-6",
@@ -116,9 +116,9 @@ logoText: "text-2xl sm:text-3xl font-extrabold tracking-tight bg-gradient-to-r f
   ctaButtonText: "relative",
 
   // Footer
-  footer: "border-t border-violet-100 bg-gradient-to-r from-violet-50 to-fuchsia-50 py-6 sm:py-8",
+  footer: "border-t border-violet-100 bg-gradient-to-r from-violet-50 to-fuchsia-50 py-6 sm:py-4",
   footerContainer: "max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center",
-  footerText: "text-sm sm:text-base text-slate-500 font-medium",
+  footerText: "text-sm sm:text-base text-slate-900 font-large",
   footerHeart: "bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent",
   footerLink: "hover:text-purple-400 underline"
 };
