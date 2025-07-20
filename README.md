@@ -94,12 +94,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-## 🙏 Acknowledgements
 
-Crafted with ❤️ to empower everyone with intelligent and beautiful resumes using the power of AI and the MERN Stack.
 
-```
-
----
 
 
