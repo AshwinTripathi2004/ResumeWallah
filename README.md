@@ -1,4 +1,4 @@
-```
+
 # 🌟 ResumeWallah – AI-Powered Smart Resume Builder Built on MERN Stack
 
 **ResumeWallah** is a next-gen, full-stack resume builder web application that uses the power of **Artificial Intelligence** and the popular **MERN Stack** (MongoDB, Express, React, Node.js) to help users build sleek, professional, and personalized resumes in minutes. Whether you're a student, fresher, or working professional — ResumeWallah makes resume creation fast, smart, and effortless with intelligent suggestions and a beautiful design.
